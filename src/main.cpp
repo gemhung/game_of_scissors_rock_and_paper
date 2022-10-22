@@ -1,14 +1,17 @@
+#include <util.h>
+#include <choice.h>
+#include <player.h>
+#include <game.h>
+#include <referee.h>
 
-#include<iostream>
-#include<my_temp.h>
-#include<utility>
+int main() {
+    auto game = GameBuilder<Player<Computer>, Player<Human>>()
+        .computer(Player<Computer>())
+        .human(Player<Human>())
+        .rounds(10)
+        .build();
 
-using namespace std;
+    game.run();
 
-int main () {
-    print();
-    std::pair<int, int> p {1,2};
-    auto [r1, r2] = p;
-    cout<<r1<<","<<r2<<endl;
-    return 0;
+	return 0;
 }
