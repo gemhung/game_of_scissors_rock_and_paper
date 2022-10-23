@@ -5,7 +5,7 @@
 
 #include<choice.h>
 
-const char* toString(Choice choice) {
+auto toString(Choice choice) -> std::string_view {
 	switch (choice) {
 	case Choice::Paper:
 		return "Paper";
@@ -13,14 +13,10 @@ const char* toString(Choice choice) {
 		return "Rock";
 	case Choice::Scissors:
 		return "Scissors";
-//	case Choice::None:
-// return "None";
-	default:
-		throw std::bad_cast();
 	}
 }
 
-const char* to_symbol(Choice choice) {
+auto to_symbol(Choice choice) -> std::string_view {
 	switch (choice) {
 	case Choice::Paper:
 		return "👋";
@@ -28,8 +24,6 @@ const char* to_symbol(Choice choice) {
 		return "✊";
 	case Choice::Scissors:
 		return "✌️";
-	default:
-		throw std::bad_cast();
 	}
 }
 

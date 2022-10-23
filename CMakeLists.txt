@@ -16,6 +16,6 @@ set(SOURCE_FILES ./src/main.cpp)
 add_executable(game ${SOURCE_FILES})
 install(TARGETS game DESTINATION ${GAME_INSTALL_BIN_DIR})
 
-#add_subdirectory(test)
+add_subdirectory(test)
 
 
